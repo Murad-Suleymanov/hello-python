@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: registry.easysolution.work
-  IMAGE_NAME: "hello-python"
+  IMAGE_NAME: "hello-python-main"
 
 jobs:
   build-and-push:
@@ -48,5 +48,5 @@ jobs:
         run: |
           curl -sf -X POST https://webhook.easysolution.work/webhook/build-complete \
             -H "Content-Type: application/json" \
-            -d '{"service":"hello-python","namespace":"hello-python","tag":"${{ steps.vars.outputs.short_sha }}"}'
+            -d '{"service":"hello-python-main","namespace":"hello-python","tag":"${{ steps.vars.outputs.short_sha }}"}'
 
