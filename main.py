@@ -6,6 +6,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
 from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
 
+
 app = FastAPI(
     title="Hello Python API",
     description="Sadə FastAPI tətbiqi - Docker ilə hazır",
